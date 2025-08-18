@@ -16,6 +16,7 @@
       color: #000000;
       line-height: 1.8;
       scroll-behavior: smooth;
+      
       overflow-x: hidden;
     }
 
@@ -78,7 +79,7 @@
       page-break-after: always;
       opacity: 0;
       transform: translateY(50px);
-      transition: opacity 1s ease, transform 1s ease;
+      transition: opacity 0s ease, transform 1s ease;
     }
 
     section.visible {
@@ -178,7 +179,7 @@
 }
 /* Logo fix: keep name in one line */
 .logo {
-  font-size: 1rem;
+  font-size: 0.5rem;
   white-space: nowrap;  /* prevents breaking into 2 lines */
   overflow: hidden;
   text-overflow: ellipsis;
@@ -190,16 +191,18 @@ nav {
   justify-content: center;
   flex-wrap: wrap;   /* allows wrapping on small screens */
   background-color: black;
-  padding: 10px 0;
+  padding: 5px 0;
+  gap:1.5px
 }
 
 /* Navbar links */
 nav a {
   color: white;
-  padding: 8px 12px;
+  padding: 6px 10px;
   text-decoration: none;
   font-size: 10px;
   white-space: nowrap;
+  
 }
 
 /* Responsive adjustments */
@@ -455,16 +458,7 @@ nav a {
     Gaze of Hell, Wrath Unbound
   </footer>
 
-  <!-- JavaScript for animations -->
-  <script>
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
+
     sections.forEach(section => observer.observe(section));
   </script>
 
