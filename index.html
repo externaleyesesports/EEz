@@ -176,6 +176,62 @@
 .home-logo img:hover {
   transform: scale(1.05);
 }
+/* Logo fix: keep name in one line */
+.logo {
+  font-size: 2rem;
+  white-space: nowrap;  /* prevents breaking into 2 lines */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Navbar container */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;   /* allows wrapping on small screens */
+  background-color: black;
+  padding: 10px 0;
+}
+
+/* Navbar links */
+nav a {
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  nav {
+    flex-wrap: wrap; /* keep horizontal but allow wrapping to next row */
+  }
+
+  nav a {
+    flex: 1 1 auto;   /* make tabs resize */
+    text-align: center;
+    font-size: 12px;  /* smaller text */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    flex-wrap: wrap; /* tabs break into two lines if needed */
+  }
+
+  nav a {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
 
     /* Footer */
     .footer {
@@ -191,6 +247,7 @@
       z-index: 1000;
       box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
     }
+  
   </style>
 </head>
 <body>
