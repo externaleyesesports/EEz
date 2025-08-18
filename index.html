@@ -175,7 +175,60 @@
 
 .home-logo img:hover {
   transform: scale(1.05);
+}
+    /* Universal Reset for Responsiveness */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Sections padding */
+section {
+  padding: 40px 20px;
+}
+    /* Tablet screens */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 30px 15px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  nav {
+    flex-direction: column;
+  }
+  .player-card {
+    padding: 10px;
+  }
     /* Footer */
     footer {
       position: fixed;
